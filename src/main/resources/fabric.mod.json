@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "stone-is-stone",
+	"version": "${version}",
+	"name": "Stone Is Stone",
+	"description": "Make more stone variants usable in vanilla recipes (stone, deepslate, granite, ...)",
+	"authors": [
+		"Franco227"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Franco227/StoneIsStone"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/stone_is_stone/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.franco227.stone_is_stone.StoneIsStone"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
