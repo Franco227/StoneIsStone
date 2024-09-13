@@ -3,15 +3,16 @@
 	"id": "stone-is-stone",
 	"version": "${version}",
 	"name": "Stone Is Stone",
-	"description": "Make more stone variants usable in vanilla recipes (stone, deepslate, granite, ...)",
+	"description": "Makes more stone variants usable in vanilla recipes (stone, deepslate, granite, ...)",
 	"authors": [
 		"Franco227"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/Franco227/StoneIsStone"
+		"homepage": "https://modrinth.com/mod/stone-is-stone",
+		"sources": "https://github.com/Franco227/StoneIsStone",
+		"issues": "https://github.com/Franco227/StoneIsStone/issues"
 	},
-	"license": "CC0-1.0",
+	"license": "GLP-3.0",
 	"icon": "assets/stone_is_stone/icon.png",
 	"environment": "*",
 	"entrypoints": {
