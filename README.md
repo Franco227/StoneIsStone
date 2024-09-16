@@ -11,6 +11,7 @@ Available on [Modrinth](https://modrinth.com/mod/stone-is-stone/).
 - Granite
 - End Stone
 - Mossy Cobblestone
+- Tuff
 
 ### Affected Recipes
 - Stone Tools
