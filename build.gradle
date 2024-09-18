@@ -18,17 +18,7 @@ repositories {
 	// for more information about repositories.
 }
 
-loom {
-	splitEnvironmentSourceSets()
 
-	mods {
-		"stone_is_stone" {
-			sourceSet sourceSets.main
-			sourceSet sourceSets.client
-		}
-	}
-
-}
 
 dependencies {
 	// To change the versions see the gradle.properties file
