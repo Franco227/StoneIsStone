@@ -7,6 +7,7 @@ import net.minecraft.registry.tag.TagGroupLoader;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -19,6 +20,12 @@ import static com.franco227.stone_is_stone.StoneIsStone.MOD_ID;
 
 @Mixin(TagGroupLoader.class)
 public class TagGroupLoaderMixin {
+
+    @Unique
+    private boolean isEqualToVanillaTag(Identifier tag, String vanilla_tag) {
+        return tag.equals(Identifier.of("minecraft", vanilla_tag));
+    }
+
     @Inject(method = "loadTags(Lnet/minecraft/resource/ResourceManager;)Ljava/util/Map;", at = @At("RETURN"))
     public void interceptLoadTags(
             ResourceManager resourceManager,
@@ -28,11 +35,8 @@ public class TagGroupLoaderMixin {
         List<Item> STONE_VARIANTS = CONFIG.getStoneVariantsItems();
 
         map.forEach((tag, entries) -> {
-            if (tag.equals(Identifier.of("minecraft", "stone_tool_materials")) ||
-                tag.equals(Identifier.of("minecraft", "stone_crafting_materials"))) {
-                STONE_VARIANTS.forEach((variant) -> {
-                    entries.add(new TagGroupLoader.TrackedEntry(TagEntry.create(Identifier.of(variant.toString())), MOD_ID));
-                });
+            if (isEqualToVanillaTag(tag, "stone_tool_materials") || isEqualToVanillaTag(tag, "stone_crafting_materials")) {
+                STONE_VARIANTS.forEach((variant) -> entries.add(new TagGroupLoader.TrackedEntry(TagEntry.create(Identifier.of(variant.toString())), MOD_ID)));
             }
         });
     }

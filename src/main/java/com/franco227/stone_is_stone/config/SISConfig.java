@@ -39,7 +39,6 @@ public class SISConfig {
 
 
     public static SISConfig loadConfig(File file) {
-        LOGGER.info("[Stone Is Stone] Loading config...");
         SISConfig config = null;
 
         if (file.exists()) {
@@ -48,19 +47,21 @@ public class SISConfig {
             ) {
                 config = gson.fromJson(fileReader, SISConfig.class);
             } catch (org.spongepowered.include.com.google.gson.JsonSyntaxException e) {
-                LOGGER.error("[Stone Is Stone] Failed to load config: %s".formatted(e.getMessage().split(": ")[1]));
-                LOGGER.info("[Stone Is Stone] Recreating config.");
+                String error_message = "[Stone Is Stone] Failed to load config: %s".formatted(e.getMessage().split(": ")[1]);
+                LOGGER.error(error_message);
             } catch (Exception e) {
                 LOGGER.error("[Stone Is Stone] Failed to load config: ", e);
-                LOGGER.info("[Stone Is Stone] Recreating config.");
             }
         }
 
         if (config == null) {
+            LOGGER.info("[Stone Is Stone] Recreating config.");
             config = new SISConfig();
         }
 
         config.saveConfig(file);
+        String loaded_message = "[Stone Is Stone] Loaded config! (config v%s)".formatted(config.version);
+        LOGGER.info(loaded_message);
         return config;
     }
 

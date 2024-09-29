@@ -19,7 +19,8 @@ public class StoneIsStone implements ModInitializer {
 	public void onInitialize() {
 		int stone_variants_nb = CONFIG.stone_variants.size();
 		String variants = stone_variants_nb != 1 ? "variants" : "variant";
+		String initialized_message = "[Stone Is Stone] Adding %d stone %s to recipes.".formatted(stone_variants_nb, variants);
 
-		LOGGER.info("[Stone Is Stone] Adding %d stone %s to recipes.".formatted(stone_variants_nb, variants));
+		LOGGER.info(initialized_message);
 	}
 }
