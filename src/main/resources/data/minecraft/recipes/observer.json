@@ -5,17 +5,20 @@
     "#": {
       "tag": "minecraft:stone_crafting_materials"
     },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
     "R": {
       "item": "minecraft:redstone"
     }
   },
   "pattern": [
     "###",
-    "# #",
-    "#R#"
+    "RRQ",
+    "###"
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:dropper"
-  }
+    "item": "minecraft:observer"
+  },
+  "show_notification": true
 }

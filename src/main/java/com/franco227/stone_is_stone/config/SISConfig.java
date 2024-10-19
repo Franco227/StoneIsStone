@@ -33,7 +33,7 @@ public class SISConfig {
 
     public List<Item> getStoneVariantsItems() {
         List<Item> STONE_VARIANTS_ITEMS = new java.util.ArrayList<>(List.of());
-        this.stone_variants.forEach((variant) -> STONE_VARIANTS_ITEMS.add(Registries.ITEM.get(Identifier.of(variant))));
+        this.stone_variants.forEach((variant) -> STONE_VARIANTS_ITEMS.add(Registries.ITEM.get(new Identifier(variant))));
         return STONE_VARIANTS_ITEMS;
     }
 

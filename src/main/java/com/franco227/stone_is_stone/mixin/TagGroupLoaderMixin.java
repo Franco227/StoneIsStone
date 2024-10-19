@@ -36,7 +36,7 @@ public class TagGroupLoaderMixin {
 
         map.forEach((tag, entries) -> {
             if (isEqualToVanillaTag(tag, "stone_tool_materials") || isEqualToVanillaTag(tag, "stone_crafting_materials")) {
-                STONE_VARIANTS.forEach((variant) -> entries.add(new TagGroupLoader.TrackedEntry(TagEntry.create(Identifier.of(variant.toString())), MOD_ID)));
+                STONE_VARIANTS.forEach((variant) -> entries.add(new TagGroupLoader.TrackedEntry(TagEntry.create(new Identifier(variant.toString())), MOD_ID)));
             }
         });
     }

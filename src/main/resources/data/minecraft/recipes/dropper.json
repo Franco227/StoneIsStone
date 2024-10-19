@@ -7,21 +7,15 @@
     },
     "R": {
       "item": "minecraft:redstone"
-    },
-    "T": {
-      "tag": "minecraft:planks"
-    },
-    "X": {
-      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
-    "TTT",
-    "#X#",
+    "###",
+    "# #",
     "#R#"
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:piston"
-  }
+    "item": "minecraft:dropper"
+  },
+  "show_notification": true
 }

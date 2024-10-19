@@ -5,20 +5,23 @@
     "#": {
       "tag": "minecraft:stone_crafting_materials"
     },
-    "Q": {
-      "item": "minecraft:quartz"
-    },
     "R": {
       "item": "minecraft:redstone"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
-    "###",
-    "RRQ",
-    "###"
+    "TTT",
+    "#X#",
+    "#R#"
   ],
   "result": {
-    "count": 1,
-    "id": "minecraft:observer"
-  }
+    "item": "minecraft:piston"
+  },
+  "show_notification": true
 }
