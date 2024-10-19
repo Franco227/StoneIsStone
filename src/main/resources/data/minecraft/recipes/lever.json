@@ -14,7 +14,8 @@
     "#"
   ],
   "result": {
-    "item": "minecraft:lever"
+    "count": 1,
+    "id": "minecraft:lever"
   },
   "show_notification": true
 }

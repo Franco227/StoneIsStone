@@ -18,7 +18,8 @@
     "###"
   ],
   "result": {
-    "item": "minecraft:observer"
+    "count": 1,
+    "id": "minecraft:observer"
   },
   "show_notification": true
 }
