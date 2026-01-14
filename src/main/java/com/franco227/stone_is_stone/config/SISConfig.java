@@ -1,39 +1,39 @@
 package com.franco227.stone_is_stone.config;
 
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
 import org.spongepowered.include.com.google.gson.Gson;
 import org.spongepowered.include.com.google.gson.GsonBuilder;
-
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 
 import static com.franco227.stone_is_stone.StoneIsStone.LOGGER;
 
 public class SISConfig {
     private static final Gson gson = new GsonBuilder()
-            .setPrettyPrinting()
-            .disableHtmlEscaping()
-            .create();
+        .setPrettyPrinting()
+        .disableHtmlEscaping()
+        .create();
 
     public String version = "1";
 
     public List<String> stone_variants = List.of(
-            "minecraft:andesite",
-            "minecraft:diorite",
-            "minecraft:granite",
-            "minecraft:end_stone",
-            "minecraft:stone",
-            "minecraft:deepslate",
-            "minecraft:mossy_cobblestone"
+        "minecraft:andesite",
+        "minecraft:diorite",
+        "minecraft:granite",
+        "minecraft:end_stone",
+        "minecraft:stone",
+        "minecraft:deepslate",
+        "minecraft:mossy_cobblestone"
     );
 
 
     public List<Item> getStoneVariantsItems() {
         List<Item> STONE_VARIANTS_ITEMS = new java.util.ArrayList<>(List.of());
-        this.stone_variants.forEach((variant) -> STONE_VARIANTS_ITEMS.add(Registries.ITEM.get(Identifier.of(variant))));
+        this.stone_variants.forEach((variant) -> STONE_VARIANTS_ITEMS.add(BuiltInRegistries.ITEM.getValue(ResourceLocation.parse(variant))));
         return STONE_VARIANTS_ITEMS;
     }
 
