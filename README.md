@@ -27,3 +27,4 @@ Available on **[Modrinth](https://modrinth.com/mod/stone-is-stone/)**.
 - 1.19.3 - 1.19.4
 - 1.20.x
 - 1.21.x
+- 26.x
