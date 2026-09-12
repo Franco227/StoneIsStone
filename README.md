@@ -1,8 +1,9 @@
 # Stone Is Stone
-This Fabric mod makes more stone variants usable in vanilla recipes. As simple as that.
+This Fabric mod makes more stone variants usable in recipes requiring cobblestone-like materials. Should be compatible with modded recipes as well.
 <br />**Configurable with a json file.**
 
 Available on **[Modrinth](https://modrinth.com/mod/stone-is-stone/)**.
+Other sites distributing it (or a mod using the same name/description/assets) are not affiliated with me and may not be safe.
 
 ### Added Stone Variants (by default)
 - Stone
@@ -13,7 +14,7 @@ Available on **[Modrinth](https://modrinth.com/mod/stone-is-stone/)**.
 - End Stone
 - Mossy Cobblestone
 
-### Affected Recipes
+### Affected Vanilla Recipes
 - Stone Tools
 - Brewing Stand
 - Dispenser
