@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Franco227/StoneIsStone",
 		"issues": "https://github.com/Franco227/StoneIsStone/issues"
 	},
-	"license": "GLP-3.0",
+	"license": "GPL-3.0",
 	"icon": "assets/stone-is-stone/icon.png",
 	"environment": "*",
 	"entrypoints": {
